@@ -26,7 +26,7 @@ npm start
 
 > The results are from a MacBook Pro (M1, 2020) running Node.js v20.17.0
 
-Simple query (`SELECT * FROM users WHERE id = 1`):
+Scenario 1: Simple query (`SELECT * FROM users WHERE id = 1`):
 
 ```
 knex x 458,940 ops/sec ±1.46% (95 runs sampled)
@@ -36,7 +36,7 @@ mikro-orm x 38,385 ops/sec ±6.62% (84 runs sampled)
 typeorm x 760,456 ops/sec ±5.04% (89 runs sampled)
 ```
 
-Inner join query (`SELECT * FROM users INNER JOIN accounts on users.id = accounts.user_id`):
+Scenario 2: Inner join query (`SELECT * FROM users INNER JOIN accounts on users.id = accounts.user_id`):
 
 ```
 knex x 311,164 ops/sec ±4.14% (92 runs sampled)
@@ -45,8 +45,6 @@ drizzle x 29,994 ops/sec ±0.98% (99 runs sampled)
 mikro-orm x 75,958 ops/sec ±2.00% (86 runs sampled)
 typeorm x 814,974 ops/sec ±1.02% (98 runs sampled)
 ```
-
-Benchmarking innerJoin - select * from "users" inner join "accounts" on "users"."id" = "accounts"."user_id"
 
 ## Contribute
 
