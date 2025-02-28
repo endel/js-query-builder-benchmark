@@ -1,4 +1,4 @@
-# JavaScript Query Builder Micro Benchmark
+# JavaScript Query Builder Benchmark
 
 This repository aims to benchmark different JavaScript query builders. Only the query building APIs are compared, not the execution and/or mapping of the results.
 
